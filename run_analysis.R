@@ -6,14 +6,14 @@ filePathUCIHAR = "C:/Sharanya_R_Workspace/Assignments/Cleaning_Data_week4/UCI HA
 
 
 # read train data into data frames
-subject_train <- read.table("C:/Sharanya_R_Workspace/Assignments/Cleaning_Data_week4/UCI HAR Dataset/train/subject_train.txt")
-X_train <- read.table("C:/Sharanya_R_Workspace/Assignments/Cleaning_Data_week4/UCI HAR Dataset/train/X_train.txt")
-y_train <- read.table("C:/Sharanya_R_Workspace/Assignments/Cleaning_Data_week4/UCI HAR Dataset/train/y_train.txt")
+subject_train <- read.table("./train/subject_train.txt")
+X_train <- read.table("./train/X_train.txt")
+y_train <- read.table("./train/y_train.txt")
 
 # read test data into data frames
-subject_test <- read.table("C:/Sharanya_R_Workspace/Assignments/Cleaning_Data_week4/UCI HAR Dataset/test/subject_test.txt")
-X_test <- read.table("C:/Sharanya_R_Workspace/Assignments/Cleaning_Data_week4/UCI HAR Dataset/test/X_test.txt")
-y_test <- read.table("C:/Sharanya_R_Workspace/Assignments/Cleaning_Data_week4/UCI HAR Dataset/test/y_test.txt")
+subject_test <- read.table("./test/subject_test.txt")
+X_test <- read.table("./test/X_test.txt")
+y_test <- read.table("./test/y_test.txt")
 ## str(y_test)
 
 # add column name for subject files
@@ -21,7 +21,7 @@ names(subject_train) <- "subjectID"
 names(subject_test) <- "subjectID"
 
 # add column names for measurement files
-featureNames <- read.table("C:/Sharanya_R_Workspace/Assignments/Cleaning_Data_week4/UCI HAR Dataset/features.txt")
+featureNames <- read.table("./features.txt")
 names(X_train) <- featureNames$V2
 names(X_test) <- featureNames$V2
 
